@@ -8,7 +8,7 @@ function charArrayToString(characterArray){
 function setup() {
   createCanvas(800, 800);
   populationSize = 100;
-  mutationRate = 0.1;
+  mutationRate = 0.01;
   targetString = "Tanmay";
   bestDNA = new DNA(targetString.length);
   population = new Population(populationSize, mutationRate, targetString);
@@ -34,5 +34,5 @@ function draw() {
   population.selectParent(initialPopulation);
   initialPopulation = population.generate(initialPopulation);
   population.calcFitness(initialPopulation);
-  bestDNA = population.evaluate(initialPopulation);  
+  bestDNA = population.evaluate(initialPopulation);
 }
