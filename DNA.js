@@ -1,7 +1,7 @@
 class DNA{
   
   getRandomCharacter(){
-    let c = floor(random(63, 122));
+    let c = floor(random(63, 123));
     while(c >= 91 && c <= 96){
       c = floor(random(63, 123));
     }
